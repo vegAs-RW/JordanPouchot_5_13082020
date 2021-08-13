@@ -1,15 +1,24 @@
 {
-  "name": "orinoco-backend",
+  "name": "projet5-orinoco",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "This is the back end server for Project 5 of the Junior Web Developer path. ..",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "sass": "^1.37.5"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch ./scss/style.scss:./css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegAs-RW/JordanPouchot_5_13082020.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "uuid": "^3.3.2"
-  }
+  "bugs": {
+    "url": "https://github.com/vegAs-RW/JordanPouchot_5_13082020/issues"
+  },
+  "homepage": "https://github.com/vegAs-RW/JordanPouchot_5_13082020#readme"
 }
