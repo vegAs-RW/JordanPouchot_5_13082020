@@ -1,0 +1,26 @@
+{
+  "name": "projet5-orinoco",
+  "version": "1.0.0",
+  "description": "This is the back end server for Project 5 of the Junior Web Developer path. ..",
+  "main": "server.js",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "express": "^4.17.1",
+    "sass": "^1.37.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegAs-RW/JordanPouchot_5_13082020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vegAs-RW/JordanPouchot_5_13082020/issues"
+  },
+  "homepage": "https://github.com/vegAs-RW/JordanPouchot_5_13082020#readme"
+}
