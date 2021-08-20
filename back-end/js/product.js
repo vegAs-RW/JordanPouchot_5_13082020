@@ -1,34 +1,42 @@
-const searchParams = new URLSearchParams(Location.search);
-const idProduct= searchParams.get('_id')
+let productData = [];
+const params = new URL(document.location).searchParams;
+const id = params.get("_id");
 
+const newUrl = `http://localhost:3000/api/cameras/${id}`;
 
-let userData = [];
-const fetchUser =  async () =>{
-    await fetch('http://localhost:3000/api/cameras/${idProduct}')
+const fetchProduct = async () => {
+  await fetch(newUrl)
     .then((res) => res.json())
-    .then((data) => (userData = data));
-    
-    console.log(userData);
-    };
+    .then((data) => (productData = data));
+  console.log(productData);
+};
+const productDisplay = async () => {
+  await fetchProduct();
+  const productImage = document.getElementById("productImage");
+  productImage.innerHTML += `
+<img src="${productData.imageUrl}" class="img-fluid img-thumbnail" alt="${product.name}">
+`;
+  const productName = document.getElementById("productName");
+  productName.innerHTML += `
+<h5 class="card-title">${productData.name}</h5>
+`;
+  const productPrice = document.getElementById("productPrice");
+  productPrice.innerHTML += `
+ <h5 class="card-title">${productData.price}</h5>
+`;
+  const productDescription = document.getElementById("productDescription");
+  productDescription.innerHTML += `
+<p class="card-text">${productData.description}</p>
+`;
 
-const addCard = async () => {
-    await fetchUser()
+  addLenses();
+};
+productDisplay();
 
-    const productImg = document.getElementById("productImage");
-    productImg.innerHTML = userData.map((camera) =>
-    `
-    <img src="${camera.imageUrl}" class="img-fluid img thumbnail" alt="${camera.name}>
-    `);
-
-    const productName = document.getElementById('productName');
-    productName.innerHTML = userData.map((camera)
-    `
-    <h5 class="card-title">${camera.name}</h5>
-    `);
-
-    const productPrice = document.getElementById('productPrice');
-    productPrice.innerHTML = userData.map((camera)
-    `
-    <h5 class="card-title">${camera.price}</h5>
-    `);
+function addLenses() {
+  console.log(productData);
+  const lensesChoice = document.getElementById("option");
+  for (let lenses of productData.lenses) {
+    lensesChoice.innerHTML += `<option value="${lenses}">${lenses}</option>`;
+  }
 }
