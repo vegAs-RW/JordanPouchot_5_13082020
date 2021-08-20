@@ -33,7 +33,7 @@ const productDisplay = async () => {
 };
 productDisplay();
 
-function addLenses() {
+const addLenses = () => {
   console.log(productData);
   const lensesChoice = document.getElementById("option");
   for (let lenses of productData.lenses) {
