@@ -1,182 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Orinoco est une entreprise qui propose a la vente bon nombre d'appareil photos"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Orinoco, site d'achat d'appareils photos</title>
-  </head>
 
-  <body>
-    <div class="container-fluid">
-      <header class="border-bottom bg-light">
-        <div class="container">
-          <div class="row">
-            <nav class="col navbar navbar-expand-lg navbar-light">
-              <a href="index.html" class="navbar-brand">
-                <img
-                  src="../images/logo.png"
-                  alt="logo Orinoco"
-                  width="100"
-                  height="50"
-                />
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarContent"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div id="navbarContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Accueil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../pages/panier.html">Panier</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <main>
-        <section id="emptyBasket">
-          <div class="container">
-            <div class="row mt-3">
-              <div
-                class="
-                  col
-                  d-flex
-                  flex-column
-                  justify-content-center
-                  align-items-center
-                  text-align-center
-                "
-              >
-                <h1>Votre panier</h1>
-                <p>Votre panier est vide</p>
-                <a href="../index.html" class="btn btn-secondary"
-                  >Poursuivre vos achats</a
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>Orinoco</title>
+</head>
+
+<body>
+<!--Nav menu-->
+<header class="border-bottom bg-light">
+    <div class="container">
+      <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-light">
+          <a href="../index.html" class="navbar-brand">
+            <img
+              src="../images/logo.png"
+              alt="logo Orinoco"
+              width="100"
+              height="50"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html"
+                  >Accueil</a
                 >
-              </div>
-            </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../pages/panier.html" id="basketPreview"
+                  >Panier</a
+                >
+              </li>
+            </ul>
           </div>
-        </section>
-        <section id="fullBasket">
-          <div class="d-none" id="basket">
-            <p class="text-center fs-4 text-light bg-secondary basket d-none">
-              Contenu du panier
-            </p>
-            <div class="table-responsive">
-              <table class="table table-hover my-auto mx-0">
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<!-- Description -->
+<main>
+    <div class="mx-5 mt-4 align-middle">
+    </div>
+</main>
+
+<!-- emptyBasket -->
+<section id="emptyBasket">
+    <div class="container my-3 py-1">
+        <div class="text-center my-5 shadow p-3 mb-5 bg-body rounded">
+            <h1 class="fs-1 font-weight-bold text-secondary my-5">Votre panier est vide
+            </h1>
+            <a role="button" class="btn btn-secondary text-uppercase my-3" href="../index.html">
+                Commencez vos achats</a>
+        </div>
+    </div>`
+</section>
+
+<!-- Table -->
+<section id="section" class="container my-5 align-middle ">
+    <div class=" d-none" id="basket">
+        <p class="text-center fs-4 text-light bg-secondary basket d-none">Contenu du panier</p>
+        <div class="table-responsive">
+            <table class="table table-hover my-auto mx-0">
                 <thead>
-                  <tr class="text-center fs-5">
-                    <th scole="col">Produit</th>
+                <tr class="text-center fs-5">
                     <th scole="col">Nom</th>
-                    <th scole="col">Option</th>
                     <th scole="col">Quantité</th>
                     <th scole="col">Prix</th>
                     <th scole="col" class="bg-light">Sous-total</th>
-                  </tr>
+                </tr>
                 </thead>
-                <tbody id="productsBasket"></tbody>
+                <tbody id="productsBasket">
+                <!--Insertion panier en JS-->
+                </tbody>
                 <tfoot>
-                  <tr class="text-center fs-5 bg-light">
-                    <th colspan="4" class="bg-white"></th>
-                    <th colspan="1">Total :</th>
+                <tr class="text-center fs-5 bg-light">
+                    <th colspan="2" class="bg-white"></th>
+                    <th colspan="1">Total : </th>
                     <th colspan="1" id="totalPrice"></th>
-                  </tr>
+                </tr>
                 </tfoot>
-              </table>
-            </div>
-            <div class="text-center my-5 row" id="cacheButton">
-              <div class="col-12 col-sm-6 my-4">
-                <button
-                  type="submit"
-                  class="btn btn-secondary mx-5"
-                  id="validationBasket"
-                >
-                  Valider la commande
-                </button>
-              </div>
-              <div class="col-12 col-sm-6 my-4">
-                <button type="button" class="btn btn-danger mx-5">
-                  Vider le panier
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <form>
-          <div class="mb-3">
-            <label for="formName" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="formName" />
-          </div>
-          <div class="mb-3">
-            <label for="formLastName" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="formLastName" />
-          </div>
-          <div class="mb-3">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" />
-          </div>
-          <div class="mb-3">
-            <label for="adress" class="form-label">Adresse</label>
-            <input type="text" class="form-control" id="adress" />
-          </div>
-          <div class="mb-3">
-            <label for="city" class="form-label">Ville</label>
-            <input type="text" class="form-control" id="city" />
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="Check1" />
-            <label class="form-check-label" for="Check1"
-              >Accepter les conditions générales de vente</label
-            >
-          </div>
-          <div class="text-center my-5 d-md-flex justify-content-md-end">
+            </table>
+        </div>
+        <div class="text-center my-5 row" id="cacheButton">
             <div class="col-12 col-sm-6 my-4">
-              <button type="submit" class="btn btn-secondary">
-                Valider la commande
-              </button>
+                <button type="submit" class="btn btn-secondary mx-5" id="validationBasket">Valider le panier</button>
             </div>
-          </div>
-        </form>
-      </main>
-      <footer>
-        <div class="bg-light mt-5">
-          <div class="container">
-            <div class="row py-4">
-              <div class="col">
-                <ul class="list-inline text-center">
-                  <li class="list-inline-item">
-                    <a href="#" class="text-dark">À propos</a>
-                  </li>
-                  <li class="list-inline-item">&middot;</li>
-                  <li class="list-inline-item">
-                    <a href="#" class="text-dark">Vie privée</a>
-                  </li>
-                  <li class="list-inline-item">&middot;</li>
-                  <li class="list-inline-item">
-                    <a href="#" class="text-dark">Conditions d'utilisations</a>
-                  </li>
-                </ul>
-              </div>
+            <div class="col-12 col-sm-6 my-4">
+                <button type="button" class="btn btn-danger mx-5" id="clearBasket">Vider le panier</button>
             </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Formulaire -->
+<div class="my-3 mx-5" id="orderForm">
+    <p class="my-5 fs-5">Merci de remplir ce formulaire pour passer votre commande.</br> Tous les champs sont obligatoires.</p>
+    <form class="row g-3" id="orderFormValidity">
+        <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Ex: 'Tony'"
+                   pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Ex: 'Stark'"
+                   pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefaultUsername" class="form-label">Email</label>
+            <div class="input-group has-validation">
+                <input type="text" class="form-control" id="email" placeholder="Ex: 'tonystark@avengers.com'"
+                       pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Adresse</label>
+            <input type="text" class="form-control" id="address" placeholder="Ex: '3 rue Thanos'"
+                   pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault04" class="form-label">Ville</label>
+            <input type="text" class="form-control" id="city" placeholder="Ex: 'New York'"
+                   pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required>
+        </div>
+        <div class="col-12">
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                    <p> Accepter les termes et conditions de vente</p>
+                </label>
+            </div>
+        </div>
+
+        <div class="text-center my-5 d-md-flex justify-content-md-end">
+            <div class="col-12 col-sm-6 my-4">
+                <button type="submit" class="btn btn-secondary mx-5" id="order">Passer la commande</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+<!-- Footer -->
+<footer>
+    <div class="bg-light mt-3">
+      <div class="container">
+        <div class="row py-4">
+          <div class="col">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">À propos</a>
+              </li>
+              <li class="list-inline-item">&middot;</li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">Vie privée</a>
+              </li>
+              <li class="list-inline-item">&middot;</li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">Conditions d'utilisations</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
-    <script
+  </footer>
+
+<script src="../js/function.js"></script>
+<script src="../js/basket.js"></script>
+<script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
@@ -191,5 +206,8 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-  </body>
+    <script src="https://kit.fontawesome.com/6071a3c9ab.js" crossorigin="anonymous"></script>
+
+
+</body>
 </html>
