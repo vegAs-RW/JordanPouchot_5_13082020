@@ -1,5 +1,3 @@
-
-
 // récupération de l'id du produit
 const searchParams = new URLSearchParams(location.search);
 const newId = searchParams.get("_id");
@@ -61,8 +59,8 @@ fetch(newUrl)
                 quantity.value,
                 product.imageUrl
             );
-            // vérifie s'il est déja présent
-            // si oui, dejaPresent en true et sauvegarde sa place dans le localStorage
+            // vérifie si le produit est déja présent
+            // si oui, isAlreadyPresent en true et sauvegarde sa place dans le localStorage
             let isAlreadyPresent = false;
             let indexModification;
             for (products of basket) {
@@ -73,7 +71,7 @@ fetch(newUrl)
                 }
             }
 
-            // si déjaPresent incrémente seulement la quantité
+            // si déja present on ajoute seulement de la quantité
             if (isAlreadyPresent) {
                 basket[indexModification].quantity =
                     +basket[indexModification].quantity + +objectProduct.quantity;

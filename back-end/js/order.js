@@ -1,7 +1,6 @@
 const order = JSON.parse(localStorage.getItem("order")) || [];
-const date = JSON.parse(localStorage.getItem("date")) || [];
 
-// affiche Mes informations
+// Afficher les informations renseignés
 const informations = document.getElementById("contact");
 informations.innerHTML += `
     <p class="fs-5"><span class="fw-bold text-capitalize"><strong>${order.contact.firstName}</strong></span>, merci pour votre commande !</p>
@@ -16,7 +15,7 @@ informations.innerHTML += `
     </div>
     `;
 
-// affiche Récapitulatif de ma commande
+// Affiche récapitulatif de la commande
 for (product of basket) {
     displayProductListTable(product);
 }
@@ -25,14 +24,5 @@ for(element of deletedItem){
     element.classList.add("d-none");
 }
 
-//affiche le prix total
+// Afficher le prix total
 totalPrice();
-
-//bouton imprimer
-const print = document.getElementById("print");
-print.addEventListener("click", (e) => {
-    e.preventDefault;
-    window.print();
-});
-
-

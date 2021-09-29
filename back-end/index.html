@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -14,54 +12,51 @@
       crossorigin="anonymous"
     />
     <title>Accueil - Orinoco</title>
-</head>
-
-<body>
-<!--Header + nav menu-->
-<header class="border-bottom bg-light">
-  <div class="container">
-    <div class="row">
-      <nav class="col navbar navbar-expand-lg navbar-light">
-        <a href="./index.html" class="navbar-brand">
-          <img
-            src="../back-end/images/logo.png"
-            alt="logo Orinoco"
-            width="100"
-            height="50"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarContent"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarContent" class="collapse navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html"
-                >Accueil</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../back-end/pages/panier.html" id="basketPreview"
-                >Panier</a
-              >
-            </li>
-          </ul>
+  </head>
+  <body>
+    <!--Header + nav menu-->
+    <header class="border-bottom bg-light">
+      <div class="container">
+        <div class="row">
+          <nav class="col navbar navbar-expand-lg navbar-light">
+            <a href="./index.html" class="navbar-brand">
+              <img
+                src="../back-end/images/logo.png"
+                alt="logo Orinoco"
+                width="100"
+                height="50"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarContent"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="../back-end/pages/panier.html"
+                    id="basketPreview"
+                    >Panier</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<!-- Description -->
-<main>
-    <div class="jumbotron text-center my-3">
+      </div>
+    </header>
+    <!-- Description -->
+    <main>
+      <div class="jumbotron text-center my-3">
         <h1>Bienvenue chez Orinoco</h1>
         <p>
           Retrouvez une large selection d'appareils photo vintage et leurs
@@ -69,42 +64,37 @@
         </p>
       </div>
       <section class="mx-3">
-    <div class="row mx-3 my-4" id="liste">
-    </div>
-</section>
-</main>
-
-<!-- insertion des produits en JS -->
-
-
-<!-- Footer -->
-<footer>
-    <div class="bg-light mt-3">
-      <div class="container">
-        <div class="row py-4">
-          <div class="col">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#" class="text-dark">À propos</a>
-              </li>
-              <li class="list-inline-item">&middot;</li>
-              <li class="list-inline-item">
-                <a href="#" class="text-dark">Vie privée</a>
-              </li>
-              <li class="list-inline-item">&middot;</li>
-              <li class="list-inline-item">
-                <a href="#" class="text-dark">Conditions d'utilisations</a>
-              </li>
-            </ul>
+        <div class="row mx-3 my-4" id="liste"></div>
+      </section>
+      <!-- insertion des produits en JS -->
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="bg-light mt-3">
+        <div class="container">
+          <div class="row py-4">
+            <div class="col">
+              <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">À propos</a>
+                </li>
+                <li class="list-inline-item">&middot;</li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">Vie privée</a>
+                </li>
+                <li class="list-inline-item">&middot;</li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-dark">Conditions d'utilisations</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-<script src="../back-end/js/function.js"></script>
-<script src="../back-end/js/index.js"></script>
-<script
+    </footer>
+    <script src="../back-end/js/function.js"></script>
+    <script src="../back-end/js/index.js"></script>
+    <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
@@ -119,7 +109,5 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-
-
-</body>
+  </body>
 </html>

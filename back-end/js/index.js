@@ -1,22 +1,20 @@
-
-
 //fetch de l'URL
 fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-        addCards(data);
-    })
-    .catch((erreur) => console.log("erreur : " + erreur));
+  .then((response) => response.json())
+  .then((data) => {
+    addCards(data);
+  })
+  .catch((erreur) => console.log("erreur : " + erreur));
 
 // fonction pour la création des cards de la page d'accueil
 function addCards(data) {
-    //boucle pour chaque iteration d'un produit
-    for (produit of data) {
-        //recupère l'élément liste dans le HTML
-        const card = document.getElementById("liste");
-        //convertit le prix
-        const price = convertPrice(produit.price);
-        card.innerHTML += `
+  //boucle pour chaque iteration d'un produit
+  for (produit of data) {
+    //recupère l'élément liste dans le HTML
+    const card = document.getElementById("liste");
+    //convertit le prix
+    const price = convertPrice(produit.price);
+    card.innerHTML += `
       <div class="col-sm-12 col-md-6 col-lg-6 pb-3  ">
           <div class="card border bg-light shadow p-3 mb-5 bg-body rounded">
               <div class="card-body">
@@ -34,5 +32,5 @@ function addCards(data) {
               </div>
           </div>
       </div>`;
-    }
+  }
 }
