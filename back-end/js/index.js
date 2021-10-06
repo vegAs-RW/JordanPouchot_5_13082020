@@ -19,7 +19,7 @@ function addCards(data) {
           <div class="card border bg-light shadow p-3 mb-5 bg-body rounded">
               <div class="card-body">
                   <div class="row">
-                      <a href="./frontend/produit.html?_id=${produit._id}"><img src="${produit.imageUrl}" class="img-fluid img-thumbnail p-1" alt="${produit.name}"></a>
+                      <a href="./pages/produit.html?_id=${produit._id}"><img src="${produit.imageUrl}" class="img-fluid img-thumbnail p-1" alt="${produit.name}"></a>
                       <div class="col-6 col-sm-7 mt-3" >
                           <h5 class="card-title">${produit.name}</h5>
                       </div>

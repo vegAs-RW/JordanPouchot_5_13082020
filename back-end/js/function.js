@@ -45,7 +45,7 @@ function displayProductListTable(product) {
             <span>${product.name}</span>
         </td>
         <td class="align-middle productQuantity">
-            <button type="button" class="rounded bg-light border-0 minus" data-toggle="modal"  data-index="${indexProduct}"><span class="fas fa-minus" text-danger" data-index="${indexProduct}"></span></button>
+            <button type="button" class="rounded bg-light border-0 minus" data-toggle="modal"  data-index="${indexProduct}"><span class="fas fa-minus" data-index="${indexProduct}"></span></button>
             <span class="mx-0 mx-lg-3"> ${product.quantity}</span>
             <button type="button" class="rounded bg-light border-0 plus" data-toggle="modal" data-index="${indexProduct}"><span class="fas fa-plus" data-index="${indexProduct}"></span></button>
         </td>

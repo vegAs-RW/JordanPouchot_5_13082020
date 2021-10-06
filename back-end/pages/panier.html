@@ -77,10 +77,10 @@
             <table class="table table-hover my-auto mx-0">
                 <thead>
                 <tr class="text-center fs-5">
-                    <th scole="col">Nom</th>
-                    <th scole="col">Quantité</th>
-                    <th scole="col">Prix</th>
-                    <th scole="col" class="bg-light">Sous-total</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col" class="bg-light">Sous-total</th>
                 </tr>
                 </thead>
                 <tbody id="productsBasket">
@@ -111,29 +111,29 @@
     <p class="my-5 fs-5">Merci de remplir ce formulaire pour passer votre commande.</br> Tous les champs sont obligatoires.</p>
     <form class="row g-3" id="orderFormValidity">
         <div class="col-md-4">
-            <label for="validationDefault01" class="form-label">Prénom</label>
+            <label  class="form-label">Prénom</label>
             <input type="text" class="form-control" id="firstName" placeholder="Ex: 'Tony'"
                    pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
         </div>
         <div class="col-md-4">
-            <label for="validationDefault02" class="form-label">Nom</label>
+            <label class="form-label">Nom</label>
             <input type="text" class="form-control" id="lastName" placeholder="Ex: 'Stark'"
                    pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
         </div>
         <div class="col-md-4">
-            <label for="validationDefaultUsername" class="form-label">Email</label>
+            <label class="form-label">Email</label>
             <div class="input-group has-validation">
                 <input type="text" class="form-control" id="email" placeholder="Ex: 'tonystark@avengers.com'"
                        pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$" required>
             </div>
         </div>
         <div class="col-md-6">
-            <label for="validationDefault03" class="form-label">Adresse</label>
+            <label class="form-label">Adresse</label>
             <input type="text" class="form-control" id="address" placeholder="Ex: '3 rue Thanos'"
                    pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
         </div>
         <div class="col-md-3">
-            <label for="validationDefault04" class="form-label">Ville</label>
+            <label class="form-label">Ville</label>
             <input type="text" class="form-control" id="city" placeholder="Ex: 'New York'"
                    pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required>
         </div>
