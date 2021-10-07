@@ -26,3 +26,6 @@ for(element of deletedItem){
 
 // Afficher le prix total
 totalPrice();
+
+const backHome = document.getElementById('backHome')
+backHome.addEventListener("click", clearBasket())

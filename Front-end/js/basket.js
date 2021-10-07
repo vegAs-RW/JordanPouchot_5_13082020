@@ -95,7 +95,6 @@ if (basket.length < 1) {
       for (listId of basket) {
         products.push(listId.id);
       }
-
       // On envoie la requete en POST
       fetch("http://localhost:3000/api/cameras/order", {
         method: "POST",
@@ -110,6 +109,7 @@ if (basket.length < 1) {
           document.location.href = "commande.html";
         })
         .catch((erreur) => console.log("erreur : " + erreur));
+        
     } else {
       alert(
         "Veuillez correctement renseigner l'entièreté du formulaire pour valider votre commande."

@@ -11,17 +11,17 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <title>Orinoco</title>
+    <title>Accueil - Orinoco</title>
   </head>
   <body>
-    <!--Nav menu-->
+    <!--Header + nav menu-->
     <header class="border-bottom bg-light">
       <div class="container">
         <div class="row">
           <nav class="col navbar navbar-expand-lg navbar-light">
-            <a href="../index.html" class="navbar-brand">
+            <a href="./index.html" class="navbar-brand">
               <img
-                src="../images/logo.png"
+                src="../back-end/images/logo.png"
                 alt="logo Orinoco"
                 width="100"
                 height="50"
@@ -38,12 +38,12 @@
             <div id="navbarContent" class="collapse navbar-collapse">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="../index.html">Accueil</a>
+                  <a class="nav-link" href="./index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="../pages/panier.html"
+                    href="./pages/panier.html"
                     id="basketPreview"
                     >Panier</a
                   >
@@ -54,44 +54,20 @@
         </div>
       </div>
     </header>
-    <!-- Details du contact -->
-    <section id="contact" class="mx-5 px-0 px-lg-5">
-      <p class="text-center fs-2 my-5 bg-secondary text-white">
-        Mes informations
-      </p>
-    </section>
-
-    <!-- Tableau -->
-    <section
-      id="section"
-      class="container my-5 align-middle border-top border-dark"
-    >
-      <p class="text-center fs-2 my-5 bg-secondary text-white">
-        Récapitulatif de la commande
-      </p>
-      <div class="table-responsive">
-        <table class="table table-hover my-auto mx-0">
-          <thead>
-            <tr class="text-center fs-5">
-              <th scope="col">Nom</th>
-              <th scope="col">Quantité</th>
-              <th scope="col">Prix</th>
-              <th scope="col" class="bg-light">Sous-total</th>
-            </tr>
-          </thead>
-          <tbody id="productsBasket">
-            <!--Insertion panier en JS-->
-          </tbody>
-          <tfoot>
-            <tr class="text-center fs-5 bg-light">
-              <th colspan="2" class="bg-white"></th>
-              <th colspan="1">Total :</th>
-              <th colspan="1" id="totalPrice"></th>
-            </tr>
-          </tfoot>
-        </table>
+    <!-- Description -->
+    <main>
+      <div class="jumbotron text-center my-3">
+        <h1>Bienvenue chez Orinoco</h1>
+        <p>
+          Retrouvez une large selection d'appareils photo vintage et leurs
+          objectifs
+        </p>
       </div>
-    </section>
+      <section class="mx-3">
+        <div class="row mx-3 my-4" id="liste"></div>
+      </section>
+      <!-- insertion des produits en JS -->
+    </main>
     <!-- Footer -->
     <footer>
       <div class="bg-light mt-3">
@@ -116,9 +92,8 @@
         </div>
       </div>
     </footer>
-
-    <script src="../js/function.js"></script>
-    <script src="../js/order.js"></script>
+    <script src="./js/function.js"></script>
+    <script src="./js/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
